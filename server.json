@@ -1,0 +1,37 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.Fiery-Tools/serpgrab-mcp",
+  "description": "Real-time Google search and Google Maps results for AI agents, via the serpgrab API.",
+  "repository": {
+    "url": "https://github.com/Fiery-Tools/serpgrab-new",
+    "source": "github"
+  },
+  "websiteUrl": "https://serpgrab.com",
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "serpgrab-mcp",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "SERPGRAB_API_KEY",
+          "description": "Your serpgrab API key (free at https://serpgrab.com). Pro on RapidAPI: set RAPIDAPI_KEY instead.",
+          "isRequired": false,
+          "format": "string",
+          "isSecret": true
+        },
+        {
+          "name": "RAPIDAPI_KEY",
+          "description": "Your RapidAPI key, if you subscribe to serpgrab Pro on RapidAPI.",
+          "isRequired": false,
+          "format": "string",
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
